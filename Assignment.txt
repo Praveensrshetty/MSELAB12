@@ -1,0 +1,39 @@
+Protocol vs Subclass
+
+ protocol:Collection of some methods which are going to be implemented by any class
+*protocol resides in a .h file
+
+ * Creating a protocol
+
+ @protocol<protocol name>
+   .......
+ @end
+ 
+ ex:@protocol<Streetprotocol>
+ 
+* Adopting protocol
+ @interface interfacename:NSObject<protocol name>
+ex:  @interface Bicycle:NSObject<Streetprotocol>
+      .....
+	  interface methods
+	  .....
+	  
+	@end
+	
+* Protocols Can Have Optional Methods
+By default, all methods declared in a protocol are required methods. This means that any class that conforms to the protocol must implement those methods.
+
+It’s also possible to specify optional methods in a protocol. These are methods that a class can implement only if it needs to.
+
+Subclass:
+        A subclass inherits methods and instance variables from its superclass.
+
+If you have a class called classname and you'd like it to have a subclass called subclassname
+ex:
+    @interface subclassname : classname {
+// instance variables that subclassname has but classname lacks go here
+}
+// methods that subclassname has and classname may or may not go here. If both have it, subclassname's implementation override's classname's so long as an instance of subclassname is references.
+@end
+
+* A subclass can override a method it inherits from the class it is based on. The class it is based on is called its superclass.
