@@ -1,0 +1,90 @@
+1.DVM instructions in the form of
+Instruction name:
+Syntax:
+Example:
+1)
+Instruction name: move (move a register's value)
+Syntax          : move vA, vB 
+Example         : move v0, v1
+                  Moves v1 into v0.  
+
+2)
+Instruction name:goto target (Unconditionally jump to the indicated instruction)
+syntax          :goto +AA
+Example         :goto 0005 // -0010
+                 Jumps to current position-16 words (hex 10). 0005 is the label of the target instruction.
+
+3)
+Instruction name:move wide (Move the contents of one register-pair to another.)
+syntax          :move-wide/from16 vAA, vBBBB
+Example         :move-wide/from16 v22, v0
+                 Moves v0 into v22.
+				 
+4)
+Instruction name:throw (Throw the indicated exception.)
+syntax          :throw vAA
+Example         :throw v0
+                 Throws an exception. The exception object reference is in v0.
+				 
+5)
+Instruction name:return (Return from a single-width (32-bit) non-object value-returning method.)
+syntax          :return vAA
+Example         :return v0
+                 Returns with return value in v0.
+				 
+				 
+				 
+2.Differentiate between mobile and cloud computing
+
+mobile computing:
+1."Mobile computing is the ability to use computing capability without a pre-defined location and/or connection to a network 
+to publish and/or subscribe to information.
+2.Is taking a physical device with you.
+This could be a laptop or a mobile phone or some device which enables you to telework-working wherever you go because of the small size 
+of the device you’re using.
+3. the mobile cloud focuses on services available through mobile network operators.
+4. clients for mobile cloud computing are cell phones.
+5. limited processing power, limited transmission power, low bandwidth, and limited battery power.
+
+
+cloud computing:
+1.Cloud computing is an expression used to describe a variety of computing concepts that involve a large number of computers
+ connected through a real-time communication network such as the Internet
+2.Allows you to store your files and folders in a “cloud” area on the Internet,
+allowing you access to all of your files and folders wherever you are in the world.
+But you do need a physical device with Internet access to access it.
+3.Cloud services are used today to store, manage, and process a wide variety of data applications.
+ Cloud computing has taken the industry by storm because it enables greater accessibility, mobility, subscription based pricing,
+ and real-time access to information—all without requiring investment in infrastructure.
+4. clients for cloud computing are computers.
+5.High processing power,large tranmission power,high bandwidth and  battery power.
+
+
+3. Give an example of an application simulating an environment of  context aware computing and justify.
+
+  dialapp : context aware dialer:
+  ------------------------------
+Description
+Fast. Intuitive. Simple.
+? "The app magically knows who you're likely to call" - Android Police.
+? "Dialapp for Android magically predicts who you want to call next based on context" - AddictiveTips
+? "Dialapp’s Predictive Dialer For Android Knows Who You’re Going To Call Next" - Techcrunch
+? "It’s designed to replace your Android phone’s standard dialers – and to be a much more intelligent one." - TechinAsia
+Dialapp automatically shows people you want to call at any time.
+**Signin with your Google account for unlocking awesomeness**
+- You are home at night, you open dialer, it shows your girlfriend, mom, best friend.
+- On Friday evenings, your beer buddy tops your list on Dialapp.
+- Switch on your phone at the airport, and the cabbie now features on the dialapp screen.
+Dialapp can magically predict who you are about to call, based on your context; your location, time, calendar, conversations etc. Dialapp does *exactly* that.
+Welcome to 1-sec dialing!
+PERMISSIONS
+===========
+ACCESS_FINE_LOCATION- To access the location of the calls you made/recevied.
+android.permission.INTERNET, ACCESS_NETWORK_STATE - Cloud Syncing, and creating the contextual call log 
+READ_CONTACTS - For quick actions, people display on call log etc.
+WAKE_LOCK - Use display and processor time efficiently, yet keeping your call log fresh.
+MANAGE_ACCOUNTS, AUTHENTICATE_ACCOUNTS, WRITE_SYNC_SETTINGS, READ_SYNC_SETTINGS - Create and maintain a 'dialapp' sync account and service.
+WRITE_CONTACTS - To add to the intelligent call log.
+CALL_PHONE - To make a call via dialapp
+ACCESS_WIFI_STATE,CHANGE_WIFI_STATE - For intelligently syncing with cloud.
+
